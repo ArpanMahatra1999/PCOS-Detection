@@ -5,31 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flask Model App Result</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f3f3f3;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #333;
-        }
-
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 500px;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding-bottom: .67em;
+      }
+      h1 {
+        text-align: center;
+        background-color: #ed2b52;
+        color: #fff;
+        padding: .67em 0;
+        margin: 0px;
+      }
         p {
             margin-bottom: 15px;
-            line-height: 1.6;
+            padding: 0 .67em;
         }
 
         a {
@@ -38,6 +37,7 @@
             color: #007bff;
             border-bottom: 1px solid transparent;
             transition: border-bottom-color 0.3s ease;
+            padding: 0 .67em;
         }
 
         a:hover {
@@ -49,7 +49,6 @@
     <div class="container">
         <h1>Result</h1>
         <p><strong>Name:</strong> {{ name }}</p>
-        <p><strong>Processed Data:</strong> {{ processed_data }}</p>
         <p>
             {% if processed_data %}
                 {% if processed_data == True %}
