@@ -12,19 +12,19 @@ warnings.filterwarnings('ignore')
 def model_predict(cycle, weight_gain, hair_growth, skin_darkening, fast_food, follicle_no_l, follicle_no_r):
 
     # scale cycle
-    cycle_scaler = MinMaxScaler(2, 5)
+    cycle_scaler = MinMaxScaler(0, 10)
     cycle = cycle_scaler.transform(cycle)
 
     # scale follicle_no_l
-    fnl_scaler = MinMaxScaler(0, 18)
+    fnl_scaler = MinMaxScaler(0, 50)
     follicle_no_l = fnl_scaler.transform(follicle_no_l)
 
     # scale follicle_no_r
-    fnr_scaler = MinMaxScaler(0, 20)
+    fnr_scaler = MinMaxScaler(0, 50)
     follicle_no_r = fnr_scaler.transform(follicle_no_r)
 
     # load models from the .sav file
-    with open('svc_model.sav', 'rb') as file:
+    with open('models/svc_model.sav', 'rb') as file:
         model = pickle.load(file)
 
     # reshaping and giving output
